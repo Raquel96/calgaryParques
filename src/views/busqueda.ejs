@@ -1,0 +1,45 @@
+<% include partes/cabecera%>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-7">
+          <table class="table table-bordered">
+            <thead> <!--  cabecera -->
+              <!--fila  -->
+              <tr>
+                <!-- atributos o cabeceras -->
+                <th>Nombre</th>
+                <th>Website</th>
+                <th>Info_Sitio</th>
+                <th>Info_Ruta</th>
+                <th>Info_General</th>
+                <th>Longitud</th>
+                <th>Latitud</th>
+                <th>Localizacion</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <!-- cuerpo -->
+            <tbody>
+              <% if(data){ %>
+                 <% for(var i = 0;i < data.length;i++) { %>
+                   <tr>
+                     <td><%= data[i].nombre%></td>
+                     <td><%= data[i].website%></td>
+                     <td><%= data[i].info_sitio%></td>
+                     <td><%= data[i].info_ruta%></td>
+                     <td><%= data[i].info_general%></td>
+                     <td><%= data[i].longitud%></td>
+                     <td><%= data[i].latitud%></td>
+                     <td><%= data[i].Localizacion%></td>
+                     <td> <a href="/borrar/<%= data[i].nombre %>" class="btn btn-outline-primary form-control ">Borrar</a>
+                          <a href="/actualizar/<%= data[i].nombre %>" class="btn btn-outline-primary form-control">Actualizar</a>
+                     </td>
+                   </tr>
+                   <% } %>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <% include  partes/pie %>

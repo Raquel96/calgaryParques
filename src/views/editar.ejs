@@ -1,0 +1,36 @@
+<% include partes/cabecera%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-md-5">
+          <div class="card">
+            <div class="card-header">Editar </div>
+              <div class="card-body">
+                <form class="" action="/actualizar/<%= data.nombre %>" method="POST">
+                  <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" name="nombre" value="" class="form-control">
+                    <label for="">Website</label>
+                    <input type="text" name="website" value="" class="form-control">
+                    <label for="">info_sitio</label>
+                    <input type="text" name="info_sitio" value="" class="form-control">
+                    <label for="">info_ruta</label>
+                    <input type="text" name="info_ruta" value="" class="form-control">
+                    <label for="">info_general</label>
+                    <input type="text" name="info_general" value="" class="form-control">
+                    <label for="">longitud</label>
+                    <input type="text" name="longitud" value="" class="form-control">
+                    <label for="">latitud</label>
+                    <input type="text" name="latitud" value="" class="form-control">
+                    <label for="">localizacion</label>
+                    <input type="text" name="localizacion" value="" class="form-control">
+                  </div>
+                  <div class="">
+                    <input type="submit"  value="Actualizar" class="btn btn-primary btn-block">
+                  </div>
+                </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+<% include  partes/pie %>
